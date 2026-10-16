@@ -36,12 +36,36 @@ div img{
     margin:auto;
 }
 
-div{
-  display: inline-block;
-  width: 24%;
-  margin: 5px;
-  padding: 2px;
+
+/* Mobile: 1 column */
+div {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 2px;
 }
+
+/* Tablet: 2 columns */
+@media screen and (min-width: 772px) {
+    div {
+        display: inline-block;
+        width: 45%;
+        margin: 5px;
+        vertical-align: top;
+    }
+
+    div img {
+        max-height: 30vh;
+    }
+}
+
+/* Desktop: 3 columns */
+@media screen and (min-width: 998px) {
+    div {
+        width: 30%;
+    }
+}
+
 
 
 
